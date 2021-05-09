@@ -99,6 +99,7 @@ stopSongsBtn.addEventListener("click", stopSongs);
 
 
 let i = 0;
+// function for event listener playing all songs
 function autoplaySongs() {
     const audioArray = document.querySelectorAll("audio");
     const buttonsArray = document.querySelectorAll(".btn");
@@ -135,6 +136,7 @@ playAllBtnSongs.addEventListener("click", function() {
     continuePlay = setInterval(playNextSong, 10000);
 });
 
+// function for interval to play next song when current song is finished
 function playNextSong() {
     let song = document.querySelector("audio.playing");
     let btnPlaying = document.querySelector(".currently-playing");
@@ -151,6 +153,7 @@ function playNextSong() {
         console.log(songCurrentTime);
 }
 
+// clear/stop interval
 function stopInterval() {
     clearInterval();
 }
