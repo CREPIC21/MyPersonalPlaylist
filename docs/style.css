@@ -20,7 +20,7 @@ body {
 
 .page-content::before {
     content: "";
-    background-image: url("/docs/images/studio.jpg");
+    background-image: url("images/studio.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
