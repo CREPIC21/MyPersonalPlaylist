@@ -16,7 +16,8 @@ const songs = [];
 const allSongs = document.querySelectorAll(".song");
 allSongs.forEach(song => songs.push(song.getAttribute("id")));
 
-
+const allButons = document.getElementById("buttons");
+console.log(allButons);
 
 // control buttons
 const playAllBtnSongs = document.querySelector(".autoplay-all-songs");
@@ -27,14 +28,14 @@ const stopSongsBtn = document.querySelector(".stop-btn");
 // interval variable
 let continuePlay;
 
-function addSpinningVinyl (buttonPlaying) {
+function addSpinningVinyl(buttonPlaying) {
     const vinyl = document.createElement("i");
     vinyl.classList.add("fas");
     vinyl.classList.add("fa-compact-disc");
     buttonPlaying.appendChild(vinyl);
 }
 
-function removeSpinningVinyl () {
+function removeSpinningVinyl() {
     let vinylToRemove = document.querySelector("button i.fa-compact-disc");
     let btnPlaying = document.querySelector(".currently-playing");
     if (vinylToRemove === null) {
@@ -42,7 +43,7 @@ function removeSpinningVinyl () {
     } else {
         btnPlaying.removeChild(vinylToRemove);
     }
-    
+
 }
 
 // creating button for each song in the array
@@ -59,7 +60,7 @@ songs.forEach(song => {
     // spam.innerText = songText.charAt(0).toUpperCase() + songText.slice(1);
 
     // adding event listener on each button/song
-    btn.addEventListener("click", function() {
+    btn.addEventListener("click", function () {
         // stoping all songs so the choosen song will play
         stopSongs();
         let playingSong = document.getElementById(song);
@@ -70,9 +71,12 @@ songs.forEach(song => {
         // adding additional class to audio tag for later usage - ability to pause/stop certain song
         playingSong.classList.add("playing");
         pausePlayControl();
-  });
+    });
 
-    document.getElementById("buttons").appendChild(btn);
+    allButons.appendChild(btn);
+
+    // document.getElementById("buttons").appendChild(btn);
+    // console.log(document.getElementById("buttons").appendChild(btn));
 });
 
 
@@ -85,7 +89,7 @@ function pausePlayControl() {
             console.log(btn);
             pauseSongBtn.addEventListener("click", pauseUnpauseSong);
             playSongBtn.addEventListener("click", playUnplaySong);
-        } 
+        }
     });
 }
 
@@ -97,7 +101,7 @@ function stopSongs() {
 
         songPlaying.pause();
         songPlaying.currentTime = 0;
-        
+
         removeSpinningVinyl();
         clearInterval(continuePlay);
         document.querySelector(`button.${song}`).classList.remove("currently-playing");
@@ -115,7 +119,7 @@ function autoplaySongs() {
     const audioArray = document.querySelectorAll("audio");
     const buttonsArray = document.querySelectorAll(".btn");
     console.log(buttonsArray);
-    if ( i < audioArray.length) {
+    if (i < audioArray.length) {
         let nextSong = audioArray[i];
         let songButton = buttonsArray[i];
         nextSong.play();
@@ -136,11 +140,11 @@ function autoplaySongs() {
         i++;
         console.log(i);
     }
-    
+
 }
 
 // event listener to play all songs when note button is pressed
-playAllBtnSongs.addEventListener("click", function() {
+playAllBtnSongs.addEventListener("click", function () {
     stopSongs();
     clearInterval(continuePlay);
     autoplaySongs();
@@ -151,17 +155,17 @@ playAllBtnSongs.addEventListener("click", function() {
 function playNextSong() {
     let song = document.querySelector("audio.playing");
     let btnPlaying = document.querySelector(".currently-playing");
-        console.log(song);
-        let songCurrentTime = song.currentTime;
-        let songDurationTime = song.duration;
-        if (songDurationTime - songCurrentTime === 0) {
-            removeSpinningVinyl();
-            btnPlaying.classList.remove("currently-playing");
-            song.classList.remove("playing");
-            autoplaySongs();
-        }
-        console.log(songDurationTime);
-        console.log(songCurrentTime);
+    console.log(song);
+    let songCurrentTime = song.currentTime;
+    let songDurationTime = song.duration;
+    if (songDurationTime - songCurrentTime === 0) {
+        removeSpinningVinyl();
+        btnPlaying.classList.remove("currently-playing");
+        song.classList.remove("playing");
+        autoplaySongs();
+    }
+    console.log(songDurationTime);
+    console.log(songCurrentTime);
 }
 
 // clear/stop interval
@@ -170,7 +174,7 @@ function stopInterval() {
 }
 
 // pause control
- function pauseUnpauseSong () {
+function pauseUnpauseSong() {
     console.log("Sucess");
     let songs = document.querySelectorAll("audio");
     songs.forEach(song => {
@@ -179,11 +183,11 @@ function stopInterval() {
         }
     })
     // console.log(songs);
-    
+
 }
 
 // play control
- function playUnplaySong () {
+function playUnplaySong() {
     console.log("Sucess");
     let songs = document.querySelectorAll("audio");
     songs.forEach(song => {
