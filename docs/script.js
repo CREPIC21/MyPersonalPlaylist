@@ -1,16 +1,3 @@
-// array of songs from my songs file
-// const songs = [
-//     "a-little-bit-of-faith",
-//     "a-real-hero",
-//     "bodies",
-//     "mr-postman",
-//     "under-your-spell",
-//     "i-am-on-fire",
-//     "i-do-nothing-every-day",
-//     "i-would-have-liked-it-to-go-on-for-a-while-longer",
-//     "storybook",
-//     "your-hand-i-will-neverlet-it-go"
-// ];
 
 const songs = [];
 const allSongs = document.querySelectorAll(".song");
