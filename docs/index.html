@@ -71,8 +71,17 @@
     </div>
 
     <script type="text/javascript">
-        dataLayer.push({test: 'my-custom-dimension-1'});
-        dataLayer.push({anotherTest: 'my-custom-dimension-2'});
+        // dataLayer.push({test: 'my-custom-dimension-1'});
+        // dataLayer.push({anotherTest: 'my-custom-dimension-2'});
+
+        let eventTest = {
+            car: {
+                type: "Fiat",
+                color: "red"
+            }
+        }
+
+        dataLayer.push({anotherTest: car.type});
     </script>
     
     
