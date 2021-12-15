@@ -81,7 +81,13 @@
             }
         }
 
-        dataLayer.push({anotherTest: eventTest.car.type});
+        dataLayer.push({
+            'anotherTest': eventTest.car.type,
+            'nestedTest': {
+                'id': 'myID',
+                'title': 'Petar Pan'
+            }
+        });
     </script>
     
     
