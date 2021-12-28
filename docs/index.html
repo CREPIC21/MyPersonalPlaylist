@@ -74,6 +74,9 @@
         dataLayer.push({test: 'my-custom-dimension-1'});
         dataLayer.push({anotherTest: 'my-custom-dimension-2'});
 
+        dataLayer.push({'event': "optedOut", 'optedOut': false, testOptedOut: 'my-custom-dimension-1'});
+        dataLayer.push({anotherTest: 'my-custom-dimension-2'});
+
         let eventTest = {
             car: {
                 type: "Fiat",
