@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,17 +11,20 @@
     <link rel="preload" href="script.js" as="script">
     <meta name="google-site-verification" content="pxJo0A9aIZX649WfXdygbH1GTL1jGLrP3Z4N36ZDy9k" />
 </head>
+
 <body>
     <script type="text/javascript">
-        (function(window, document, dataLayerName, id) {
-        window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
-        function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}
-        var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
-        var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
-        tags.async=!0,tags.src="https://markomarulic.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
-        !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+        (function (window, document, dataLayerName, id) {
+            window[dataLayerName] = window[dataLayerName] || [], window[dataLayerName].push({ start: (new Date).getTime(), event: "stg.start" }); var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
+            function stgCreateCookie(a, b, c) { var d = ""; if (c) { var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString() } document.cookie = a + "=" + b + d + "; path=/" }
+            var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug"); stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
+            var qP = []; dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug"); var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
+            tags.async = !0, tags.src = "https://markomarulic.containers.piwik.pro/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
+            !function (a, n, i) { a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) { a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () { var a = [].slice.call(arguments, 0); "string" == typeof a[0] && window[dataLayerName].push({ event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1) }) } }(i[c]) }(window, "ppms", ["tm", "cm"]);
         })(window, document, 'dataLayer', 'ff0feb6d-90dd-46ee-868f-f701d22f0056');
-        </script><noscript><iframe src="//markomarulic.containers.piwik.pro/ff0feb6d-90dd-46ee-868f-f701d22f0056/noscript.html" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    </script><noscript><iframe
+            src="//markomarulic.containers.piwik.pro/ff0feb6d-90dd-46ee-868f-f701d22f0056/noscript.html" height="0"
+            width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="page-content">
         <div class="container">
 
@@ -37,7 +41,7 @@
                 <a class="camp" href="https://multiwp.demopiwikpro.com/dcrepic?utm_campaign=google_my_campaign&pk_source=google_campaign_source&search=hacked" target="_blank">Google Campaign</a>
                 <a class="camp" href="https://multiwp.demopiwikpro.com/dcrepic?utm_campaign=google_another_campaign&pk_source=google_another_campaign_source" target="_blank">Google Another Campaign</a>
                 <a class="camp" href="https://multiwp.demopiwikpro.com/dcrepic?utm_campaign=google_last_campaign&pk_source=google_last_campaign_source" target="_blank">Google Last Campaign</a> -->
-                
+
                 <!-- <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                 <label for="vehicle1"> I have a bike</label><br>
                 <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
@@ -53,7 +57,7 @@
                 <i class="fas fa-music autoplay-all-songs"></i>
             </p> -->
 
-            
+
 
             <audio src="songs/a-little-bit-of-faith.mp3" id="a-little-bit-of-faith" class="song first-song"></audio>
             <audio src="songs/exile.mp3" id="exile" class="song"></audio>
@@ -69,9 +73,11 @@
 
             <audio src="songs/i-am-on-fire.mp3" id="i-am-on-fire" class="song"></audio>
             <audio src="songs/i-do-nothing-every-day.mp3" id="i-do-nothing-every-day" class="song"></audio>
-            <audio src="songs/i-would-have-liked-it-to-go-on-for-a-while-longer.mp3" id="i-would-have-liked-it-to-go-on-for-a-while-longer" class="song"></audio>
+            <audio src="songs/i-would-have-liked-it-to-go-on-for-a-while-longer.mp3"
+                id="i-would-have-liked-it-to-go-on-for-a-while-longer" class="song"></audio>
             <audio src="songs/storybook.mp3" id="storybook" class="song"></audio>
-            <audio src="songs/your-hand-i-will-never-let-it-go.mp3" id="your-hand-i-will-never-let-it-go" class="song"></audio>
+            <audio src="songs/your-hand-i-will-never-let-it-go.mp3" id="your-hand-i-will-never-let-it-go"
+                class="song"></audio>
 
             <audio src="songs/highway-to-hell.mp3" id="highway-to-hell" class="song"></audio>
             <audio src="songs/i-do-not-know-my-name.mp3" id="i-do-not-know-my-name" class="song"></audio>
@@ -79,9 +85,9 @@
             <audio src="songs/shallow.mp3" id="shallow" class="song"></audio>
             <audio src="songs/let-us-get-it-on.mp3" id="let-us-get-it-on" class="song"></audio>
             <audio src="songs/zombie-skin.mp3" id="zombie-skin" class="song"></audio>
-            
-    
-        <!-- <div id="buttons"></div> -->
+
+
+            <!-- <div id="buttons"></div> -->
         </div>
         <!-- <p class="btn-control">
             <i class="fas fa-play-circle play-btn"></i>
@@ -91,45 +97,8 @@
         </p> -->
     </div>
     <script src="script.js"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({test: 'my-string'});
-        dataLayer.push({
-            "event": "checkout",
-            "ecommerce": {
-                "checkout": {
-                    "actionField": {
-                        "step": "customer-information",
-                        "option": "12 manadir"
-                    },
-                    "products":
-                        {
-                            "name": "Standard",
-                            "id": 1008,
-                            "price": 229,
-                            "quantity": 1
-                        }
-                }
-            }
-        })
-        dataLayer.push({
-            "event": "checkout",
-            "ecommerce": {
-                "checkout": {
-                    "actionField": {
-                        "step": "customer-information2",
-                        "option": "12 manadir"
-                    },
-                    "products":
-                        {
-                            "name": "Standard",
-                            "id": 1008,
-                            "price": 229,
-                            "quantity": 1
-                        }
-                }
-            }
-        })
-    </script>
+
+
 </body>
+
 </html>
